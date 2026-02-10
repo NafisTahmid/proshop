@@ -30,7 +30,8 @@ const StripePaymentForm = () => {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: `http://127.0.0.1:8000/#/order/${order._id}`,
+        // return_url: `http://127.0.0.1:8000/#/order/${order._id}`,
+        return_url: `https://nafist.pythonanywhere.com/order/${order._id}`,
       },
     });
 
